@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore an exclusive NFT art collection on the Polygon blockchain. Discover unique digital artwork, join our community of collectors, and view stunning pieces from our portfolio." />
+    <meta name="keywords" content="NFT, art, portfolio, digital art, Polygon blockchain, crypto art, collectibles" />
+    <meta name="theme-color" content="#e8e0d5" />
+    
+    <style>
+      body {
+        margin: 0;
+        background-color: #e8e0d5;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      .initial-loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e8e0d5;
+        z-index: 9999;
+      }
+      .spinner {
+        width: 48px;
+        height: 48px;
+        border: 3px solid rgba(0, 0, 0, 0.1);
+        border-top-color: #111827;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+    
+    <title>ArtNoxx - Digital Art Portfolio</title>
+  </head>
+  <body>
+    <!-- Initial loading indicator -->
+    <div id="root">
+      <div class="initial-loader">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

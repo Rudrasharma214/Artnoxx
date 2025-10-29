@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana:wght@500&display=swap');
+
+@import "tailwindcss";
+
+
+/* Global background: solid wall-color (no image) with ~95% opacity */
+:root {
+  --wall-hex: #e8e0d5;
+  --wall-r: 232;
+  --wall-g: 224;
+  --wall-b: 213;
+  --wall-alpha: 0.95;
+}
+
+body {
+  background-color: rgba(var(--wall-r), var(--wall-g), var(--wall-b), var(--wall-alpha));
+  background-image: none;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-position: center;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Noto Serif Hentaigana", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.carousel-mask::before,
+.carousel-mask::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(249, 248, 246, 0.9), transparent);
+  z-index: 60;
+}
+.carousel-mask::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(249, 248, 246, 0.9), transparent);
+}
+.carousel-mask::before {
+  left: 0;
+}
