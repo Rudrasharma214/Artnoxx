@@ -2,7 +2,7 @@
 
 @import "tailwindcss";
 
-*{
+* {
   scroll-behavior: smooth;
 }
 /* Global background: solid wall-color (no image) with ~95% opacity */
